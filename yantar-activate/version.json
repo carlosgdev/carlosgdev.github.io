@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "apkUrl": "https://github.com/carlosgdev/yantar-app/releases/download/v1.1.0/yantar-1.1.0.apk",
+  "apkUrl": "https://github.com/carlosgdev/yantar-app/releases/latest/download/yantar.apk",
   "notes": {
     "es": "• Pago automático sin pegar license keys.\n• Detección de actualizaciones.\n• Fix de recetas que no aparecían en la pestaña principal.",
     "en": "• Auto-activating purchase flow, no more license keys.\n• Update detection.\n• Fix for recipes not showing in main tab."
