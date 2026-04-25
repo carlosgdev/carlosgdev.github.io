@@ -1,53 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yantar Pro - Activando...</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #1C1917;
-      color: #FAFAF9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    .container { padding: 2rem; max-width: 400px; }
-    h1 { color: #F97316; font-size: 1.5rem; }
-    p { color: #A8A29E; line-height: 1.6; }
-    a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 2rem;
-      background: #F97316;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Yantar Pro</h1>
-    <p>Redirigiendo a la app...</p>
-    <a id="open-app" href="#">Abrir Yantar</a>
-  </div>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const checkoutId = params.get('checkout_id') || '';
-    const deepLink = 'yantar://activate?checkout_id=' + encodeURIComponent(checkoutId);
-
-    document.getElementById('open-app').href = deepLink;
-
-    // Auto-redirect after a brief moment
-    setTimeout(function() {
-      window.location.href = deepLink;
-    }, 500);
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yantar Pro · Activar</title>
+<style>
+  body{font-family:system-ui,sans-serif;text-align:center;padding:60px 20px;background:#FAFAF9;color:#1C1917}
+  .card{max-width:400px;margin:0 auto;background:#fff;padding:40px 30px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .check{font-size:64px;color:#22C55E;margin-bottom:16px;line-height:1}
+  h1{font-size:24px;margin:0 0 12px}
+  p{color:#78716C;line-height:1.5;margin:0 0 24px}
+  a.btn{display:inline-block;background:#F97316;color:#fff;text-decoration:none;padding:14px 32px;border-radius:12px;font-weight:600}
+</style></head><body>
+<div class="card">
+  <div class="check">&#10003;</div>
+  <h1>Compra confirmada</h1>
+  <p>Toca el botón para volver a Yantar y activar Pro.</p>
+  <a id="open" class="btn" href="#">Abrir Yantar</a>
+</div>
+<script>
+  const id = new URLSearchParams(location.search).get('checkout_id') || '';
+  const link = 'yantar://activate?checkout_id=' + encodeURIComponent(id);
+  document.getElementById('open').href = link;
+  setTimeout(() => { location.href = link; }, 800);
+</script>
+</body></html>
