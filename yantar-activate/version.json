@@ -1,8 +1,8 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "apkUrl": "https://github.com/carlosgdev/yantar-web/releases/latest/download/yantar.apk",
   "notes": {
-    "es": "• Pago automático sin pegar license keys.\n• Detección de actualizaciones.\n• Fix de recetas que no aparecían en la pestaña principal.",
-    "en": "• Auto-activating purchase flow, no more license keys.\n• Update detection.\n• Fix for recipes not showing in main tab."
+    "es": "• Comparte recetas y guarda copias de seguridad.\n• Las cantidades al cambiar raciones se escriben bien.\n• Buscar sin tildes ya funciona.\n• Las fotos de tu galería ya no desaparecen.\n• Fuera los permisos de micrófono y cámara.\n• La descarga pesa casi la mitad.",
+    "en": "• Share recipes and export backups.\n• Amounts scale correctly when changing servings.\n• Accent-insensitive search.\n• Photos from your gallery no longer vanish.\n• Microphone and camera permissions removed.\n• Almost half the download size."
   }
 }
