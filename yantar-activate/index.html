@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yantar Pro · Activar</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;margin:0;padding:48px 20px;
+       background:#FAFAF9;color:#1C1917;line-height:1.5}
+  .card{max-width:420px;margin:0 auto;background:#fff;padding:36px 28px;border-radius:16px;
+        box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .check{font-size:56px;color:#22C55E;margin-bottom:12px;line-height:1;text-align:center}
+  h1{font-size:22px;margin:0 0 8px;text-align:center}
+  p{color:#57534E;margin:0 0 20px}
+  ol{color:#57534E;padding-left:20px;margin:0 0 24px}
+  li{margin-bottom:10px}
+  .btn{display:block;background:#F97316;color:#fff;text-decoration:none;padding:15px 24px;
+       border-radius:12px;font-weight:600;text-align:center;font-size:16px;border:0;width:100%;
+       cursor:pointer;font-family:inherit}
+  .btn:active{opacity:.85}
+  .hint{font-size:13px;color:#A8A29E;text-align:center;margin:16px 0 0}
+  .key{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#F5F5F4;
+       padding:2px 6px;border-radius:5px;font-size:13px;color:#1C1917}
+</style></head><body>
+<div class="card">
+  <div class="check">&#10003;</div>
+  <h1>Compra confirmada</h1>
+  <p>Gracias por comprar Yantar Pro. Solo queda un paso.</p>
+  <ol>
+    <li>Copia la <strong>clave de licencia</strong> que te ha dado Polar
+        (empieza por <span class="key">YANTAR-</span>). Tambi&eacute;n te la han
+        enviado por correo.</li>
+    <li>Toca el bot&oacute;n de abajo para volver a Yantar.</li>
+    <li>P&eacute;gala en la pantalla de activaci&oacute;n.</li>
+  </ol>
+  <a id="open" class="btn" href="yantar://activate">Abrir Yantar y activar</a>
+  <p class="hint">Guarda la clave: te sirve para recuperar Pro si cambias de
+     m&oacute;vil o reinstalas la app. Vale para 3 dispositivos.</p>
+</div>
+<script>
+  // Arrastramos el checkout_id solo como referencia para soporte; la activación
+  // real la hace la clave de licencia, que sí se puede verificar contra Polar.
+  var id = new URLSearchParams(location.search).get('checkout_id') || '';
+  if (id) {
+    document.getElementById('open').href =
+      'yantar://activate?ref=' + encodeURIComponent(id);
+  }
+</script>
+</body></html>
